@@ -29,19 +29,48 @@ The application allows managing users with basic CRUD operations, filtering, val
 ---
 
 ## 🧩 Project Structure
-src
-┣ main
-┃ ┣ java/cat/itacademy/s04/t01/userapi
-┃ ┃ ┣ controllers
-┃ ┃ ┣ services
-┃ ┃ ┣ repositories
-┃ ┃ ┣ models
-┃ ┃ ┣ dto
-┃ ┃ ┗ exceptions
-┃ ┗ resources
-┃ ┗ application.properties
-┗ test
-┗ java/cat/itacademy/s04/t01/userapi
+
+```text
+S4.01-Introduction-To-Sprint-Boot
+├─ src
+│  ├─ main
+│  │  ├─ java
+│  │  │  └─ cat.itacademy.s04.t01.userapi
+│  │  │     ├─ controllers
+│  │  │     │  ├─ HealthController.java
+│  │  │     │  └─ UserController.java
+│  │  │     ├─ dto
+│  │  │     │  ├─ CreateUserRequest.java
+│  │  │     │  └─ HealthResponse.java
+│  │  │     ├─ exceptions
+│  │  │     │  ├─ EmailAlreadyExistsException.java
+│  │  │     │  └─ UserNotFoundException.java
+│  │  │     ├─ models
+│  │  │     │  └─ User.java
+│  │  │     ├─ repositories
+│  │  │     │  ├─ InMemoryUserRepository.java
+│  │  │     │  └─ UserRepository.java
+│  │  │     ├─ services
+│  │  │     │  ├─ UserService.java
+│  │  │     │  └─ UserServiceImpl.java
+│  │  │     └─ UserApiApplication.java
+│  │  └─ resources
+│  │     └─ application.properties
+│  └─ test
+│     └─ java
+│        └─ cat.itacademy.s04.t01.userapi
+│           ├─ controllers
+│           │  └─ UserControllerIT.java
+│           ├─ repositories
+│           │  └─ InMemoryUserRepositoryTest.java
+│           ├─ services
+│           │  └─ UserServiceImplTest.java
+│           └─ HealthControllerTest.java
+├─ target
+├─ .gitattributes
+├─ .gitignore
+├─ pom.xml
+└─ README.md
 
 ---
 
